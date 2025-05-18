@@ -1,6 +1,7 @@
 import styles from "./Head.module.css";
+import Navbar from "../Navbar/Navbar";
 
-const Head = ({ title, subtitle, logo }) => {
+const Head = ({ title, subtitle, logo, navItems, onNavClick }) => {
   return (
     <header className="flex items-center justify-between py-4 px-6 bg-white shadow mb-8">
       <div className="flex items-center">
@@ -14,10 +15,7 @@ const Head = ({ title, subtitle, logo }) => {
         )}
         <h1 className="text-2xl font-bold">{title}</h1>
       </div>
-      <nav className="flex gap-4">
-        <a href="#home">Inicio</a>
-        <a href="#about">Nosotros</a>
-      </nav>
+      <Navbar items={navItems} onClick={onNavClick} />
       {subtitle && <p className="text-sm text-gray-600">{subtitle}</p>}
     </header>
   );
