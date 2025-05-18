@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Navbar.module.css";
 
-const Navbar = ({ items, onClick, navClassName }) => {
+const Navbar = ({ items = [], onClick, navClassName }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
