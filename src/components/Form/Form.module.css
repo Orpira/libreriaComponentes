@@ -1,0 +1,40 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  gap: 14px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 1.5px solid #007bff;
+  outline: none;
+}
+
+button[type="submit"] {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #0056b3;
+}

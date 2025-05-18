@@ -1,0 +1,29 @@
+.header {
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  color: white;
+  padding: 24px 0 16px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.header nav {
+  margin-top: 8px;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.header nav a:hover {
+  color: #ffd700;
+}
