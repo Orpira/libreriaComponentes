@@ -51,37 +51,39 @@ function App({ onSubmit }) {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen text-gray-900">
+    <div className="bg-gray-100 min-h-screen text-gray-900 flex flex-col">
       <Head
-        logo="./src/assets/Vitest.png"
-        title="Mi sitio web"
+        logo="./src/assets/react.png"
+        title="Libreria React"
         navItems={navItems}
         navClassName="flex gap-4 justify-center mb-4"
         onNavClick={handleNavClick}
       />
-      <main style={{ padding: 25 }}>
+      <main style={{ padding: 25, flex: 1 }}>
         <h2 className="text-2xl font-bold text-center">
           Bienvenido a mi aplicación
         </h2>
-        <section>
-          <h3 className="text-2l font-bold text-center">
-            Formulario de acceso
-          </h3>
-          <Form
-            onSubmit={handleFormSubmit}
-            formClassName="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
-          />
-          {formResult && (
-            <div style={{ marginTop: 16 }}>
-              <div>¡Hola {formResult.nombre}!</div>
-              <div>Nombre: {formResult.nombre}</div>
-              <div>Email: {formResult.email}</div>
-            </div>
-          )}
-        </section>
+        {activeSection !== "#products" && (
+          <section>
+            <h3 className="text-2l font-bold text-center">
+              Formulario de acceso
+            </h3>
+            <Form
+              onSubmit={handleFormSubmit}
+              formClassName="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+            />
+            {formResult && (
+              <div style={{ marginTop: 16 }}>
+                <div>¡Hola {formResult.nombre}!</div>
+                <div>Nombre: {formResult.nombre}</div>
+                <div>Email: {formResult.email}</div>
+              </div>
+            )}
+          </section>
+        )}
 
         {activeSection === "#products" && (
-          <section ref={productsRef} style={{ marginTop: 32 }}>
+          <section style={{ marginTop: 32 }}>
             <h3>Nuestros productos</h3>
             <div style={{ display: "flex", gap: 16 }}>
               {cardsData.map((card, idx) => (
